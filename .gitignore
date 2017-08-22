@@ -1,1 +1,3 @@
-*.dist
+# Environment Settings
+
+*.env
