@@ -2,7 +2,7 @@ package entity
 
 type WarehouseRepository interface {
 	Create(warehouse *Warehouse) (int64, error)
-	FindById(id int) (*Warehouse, error)
+	FindByID(id int) (*Warehouse, error)
 }
 
 type Warehouse struct {

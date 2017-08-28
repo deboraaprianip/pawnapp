@@ -3,7 +3,7 @@ package infrastructure
 import (
 	"database/sql"
 	"log"
-	"pawn-clean/config"
+	"pawnapp/config"
 )
 
 func NewSqlHandler(db *config.Db) *sql.DB {

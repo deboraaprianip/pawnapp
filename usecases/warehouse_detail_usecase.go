@@ -14,12 +14,12 @@ type wareCollateralInteractor struct {
 }
 
 func (w *wareCollateralInteractor) Create(ware *domain.WarehouseDetail) (int64, error) {
-	_, err := w.wareCollRepo.FindById(ware.Warehouses.ID)
+	_, err := w.wareCollRepo.FindByID(ware.Warehouses.ID)
 	if err != nil {
 		return 0, err
 	}
 
-	_, err = w.simulationRepo.FindById(ware.Simulation.ID)
+	_, err = w.simulationRepo.FindByID(ware.Simulation.ID)
 	if err != nil {
 		return 0, err
 	}

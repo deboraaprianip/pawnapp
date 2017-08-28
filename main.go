@@ -4,11 +4,11 @@ import (
 	"context"
 	"net/http"
 	"os"
-	"pawn-clean/config"
-	"pawn-clean/infrastructure"
-	handler "pawn-clean/infrastructure/kit"
-	repo "pawn-clean/infrastructure/repository/mysql"
-	"pawn-clean/usecases"
+	"pawnapp/config"
+	"pawnapp/infrastructure"
+	handler "pawnapp/infrastructure/kit"
+	repo "pawnapp/infrastructure/repository/mysql"
+	"pawnapp/usecases"
 
 	"github.com/go-kit/kit/log"
 )

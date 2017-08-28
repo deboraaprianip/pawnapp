@@ -13,7 +13,7 @@ import (
 func MakeHandler(ctx context.Context, ws Sercive, logger kitlog.Logger) http.Handler {
 	opts := []kithttp.ServerOption{
 		kithttp.ServerErrorLogger(logger),
-		kithttp.ServerErrorEncoder()
+		kithttp.ServerErrorEncoder(),
 	}
 
 	warehouseHandler := kithttp.NewServer(

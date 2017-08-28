@@ -1,6 +1,6 @@
 package kit
 
-import domain "pawn-clean/entity"
+import domain "pawnapp/entity"
 
 type Sercive interface {
 	Create(ware *domain.Warehouse) (int64, error)

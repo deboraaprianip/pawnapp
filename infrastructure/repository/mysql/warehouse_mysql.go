@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"database/sql"
-	domain "pawn-clean/entity"
+	domain "pawnapp/entity"
 )
 
 type warehouseRepository struct {
@@ -21,7 +21,7 @@ func (w *warehouseRepository) Create(ware *domain.Warehouse) (int64, error) {
 	return res.LastInsertId()
 }
 
-func (w *warehouseRepository) FindById(id int) (*domain.Warehouse, error) {
+func (w *warehouseRepository) FindByID(id int) (*domain.Warehouse, error) {
 	ware := &domain.Warehouse{}
 	stmt, err := w.Conn.Prepare("SELECT * FROM ware_collateral_detail WHERE id ?")
 	if err != nil {

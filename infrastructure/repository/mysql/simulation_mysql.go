@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"database/sql"
-	domain "pawn-clean/entity"
+	domain "pawnapp/entity"
 )
 
 type simulationRepository struct {
@@ -10,7 +10,7 @@ type simulationRepository struct {
 }
 
 func NewSimulationRepo(conn *sql.DB) domain.SimulationRepository {
-	return simulationRepository{Conn: conn}
+	return &simulationRepository{Conn: conn}
 }
 
 func (s *simulationRepository) Create(sim *domain.Simulation) (int64, error) {

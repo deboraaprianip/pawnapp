@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"database/sql"
-	"pawn-clean/entity"
+	domain "pawnapp/entity"
 )
 
 type productRepository struct {

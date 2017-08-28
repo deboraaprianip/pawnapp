@@ -4,8 +4,8 @@ import "time"
 
 type ProductRepository interface {
 	Create(product *Product) (int64, error)
-	FindById(id int) (*Product, error)
-	GetMaxDurationById(id int) (int, error)
+	FindByID(id int) (*Product, error)
+	GetMaxDurationById(id int) (int64, error)
 }
 
 type Product struct {

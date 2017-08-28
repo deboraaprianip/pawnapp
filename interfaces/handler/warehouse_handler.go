@@ -1,1 +1,3 @@
 package hadler
+
+type warehouseRequest

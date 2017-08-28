@@ -2,7 +2,7 @@ package entity
 
 type CollateralRepository interface {
 	Create(coll *Collateral) (int64, error)
-	FindById(id int) (*Collateral, error)
+	FindByID(id int) (*Collateral, error)
 }
 
 type Collateral struct {

@@ -6,7 +6,7 @@ type warehouseResponse struct {
 	IDWarehouse      int
 	HargaTaksirAtas  float64
 	HargaTaksirBawah float64
-	MaxDuration      int
+	MaxDuration      int64
 }
 
 type WarehouseInteractor struct {
@@ -16,7 +16,7 @@ type WarehouseInteractor struct {
 }
 
 func (w *WarehouseInteractor) Create(ware *domain.Warehouse) (int64, error) {
-	res, err := w.WarehouseRepo.FindById(ware.ID)
+	res, err := w.WarehouseRepo.FindByID(ware.ID)
 	if err != nil {
 		return 0, err
 	}
@@ -28,11 +28,11 @@ func (w *WarehouseInteractor) Create(ware *domain.Warehouse) (int64, error) {
 }
 
 func (w *WarehouseInteractor) Appraise(id int) (*warehouseResponse, error) {
-	warehouse, err := w.WarehouseRepo.FindById(id)
+	warehouse, err := w.WarehouseRepo.FindByID(id)
 	if err != nil {
 		return &warehouseResponse{}, nil
 	}
-	collateral, err := w.CollateralRepo.FindById(warehouse.Collateral.ID)
+	collateral, err := w.CollateralRepo.FindByID(warehouse.Collateral.ID)
 	if err != nil {
 		return &warehouseResponse{}, nil
 	}

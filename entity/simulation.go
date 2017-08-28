@@ -4,7 +4,7 @@ import "time"
 
 type SimulationRepository interface {
 	Create(simulation *Simulation) (int64, error)
-	FindById(id int) (*Simulation, error)
+	FindByID(id int) (*Simulation, error)
 }
 
 type Simulation struct {

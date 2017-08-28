@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"database/sql"
-	domain "pawn-clean/entity"
+	domain "pawnapp/entity"
 )
 
 type collateralRepository struct {
